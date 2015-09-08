@@ -1,0 +1,9 @@
+<div id="spot" class="hidden-xs">
+  <div id="tabs">
+    <ul tal:attributes="id viewlet/id">
+      <li tal:repeat="menu viewlet/menus" tal:attributes="class menu/selected">
+      <a href="" tal:attributes="href menu/action" tal:content="menu/title"> </a>
+      </li>
+    </ul>
+  </div>
+</div>
