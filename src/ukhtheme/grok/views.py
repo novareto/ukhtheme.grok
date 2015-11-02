@@ -20,12 +20,6 @@ class FormTemplate(pt.PageTemplate):
     template = get_template(templates_dir, 'formtemplate.cpt')
 
 
-#class UVCHome(Page):
-#    grok.name('index')
-#    grok.context(IUVCSite)
-#    template = get_template(templates_dir, 'home.cpt')
-
-
 class HomeFolderIndex(views.Index):
     grok.layer(ILayer)
 
