@@ -32,21 +32,20 @@ class Navigation(grok.ViewletManager):
     grok.name('navigation')
     grok.context(Interface)
 
-    
-class FooterTemplate(FooterTemplate):
-    grok.layer(ILayer)
 
-    template = get_template(template_dir, 'footer.cpt')
+#class FooterTemplate(FooterTemplate):
+#    grok.layer(ILayer)
+#    template = get_template(template_dir, 'footer.cpt')
 
 
 class Override(PersonalPreferencesViewlet):
     grok.layer(ILayer)
     grok.name('personalpreferencesviewlet')
-    
+
     def available(self):
         return False
 
-    
+
 class PersonalPreferencesViewlet(PersonalPreferencesViewlet):
     grok.layer(ILayer)
     grok.require('zope.View')
@@ -89,7 +88,7 @@ class SocialLinks(grok.Viewlet):
     grok.viewletmanager(IAboveContent)
     grok.context(Interface)
     template = get_template(templates_dir, 'social.pt')
-    
+
 
 class GlobalMenuViewlet(menuviewlets.GlobalMenuViewlet):
     grok.layer(ILayer)
@@ -151,7 +150,8 @@ class BGHeader(viewlets.header.BGHeader):
 class DocumentActionsTemplate(PageTemplate):
     grok.view(DocumentActionsMenuViewlet)
     grok.layer(ILayer)
-    template = get_template(templates_dir, 'documentactionstemplate.cpt')
+    #template = get_template(templates_dir, 'documentactionstemplate.cpt')
+    template = get_template(template_dir, 'documentactionstemplate.cpt')
 
 
 class Breadcrumbs(Breadcrumbs):

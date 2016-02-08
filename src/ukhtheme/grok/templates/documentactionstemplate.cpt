@@ -1,0 +1,8 @@
+<ul tal:attributes="id viewlet.id" class="pull-right">
+  <li tal:repeat="menu viewlet.menus">
+    <a href="" tal:attributes="href menu.action">
+      <span src="" title="" alt="" tal:attributes="class menu.icon; title menu.title; alt menu.title"> </span>
+    </a>
+  </li>
+</ul>
+
